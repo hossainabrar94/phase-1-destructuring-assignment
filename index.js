@@ -1,6 +1,20 @@
 const farmAnimals = 'cow horse sheep pig chicken';
+const farmAnimalsArr = farmAnimals.split(' ');
+let [moo, neigh, baa, oink, cluck] = farmAnimalsArr;
+// const remove1 = (arr) => {
+//   const result = [arr[0]];
+//   for(let i = 2; i < arr.length; i++) result.push(arr[i]);
+//   return result;
+// }
+//let [bessie, dolly, babe, little] = remove1(farmAnimals.split(' '));
+let [bessie, dolly, babe, little] = [...farmAnimalsArr.slice(0,1),...farmAnimalsArr.slice(2)];
+let [blackAndWhite, black, pink] = [farmAnimalsArr[0], farmAnimalsArr[2], farmAnimalsArr[3]];
+
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let [red, orange, yellow, green, blue, indigo, violet] = colors;
+let [r,o,y,g,b,i,v] = colors;
+let indg = colors[5];
 
 const muppet = {
   muppetName: 'Miss Piggy',
@@ -9,6 +23,7 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+let {muppetName, color, song, job, partner} = muppet
 
 const nestedMuppet = {
   nestedName: 'Kermit',
@@ -24,6 +39,8 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+const nestedMuppetMovie = nestedMuppet.album.theMuppetMovie;
+let [song2, song4, nestedJob, nestedPartner] = [nestedMuppetMovie.song2, nestedMuppetMovie.song4, nestedMuppet.nestedJob, nestedMuppet.nestedPartner]
 
 // Strings
 
